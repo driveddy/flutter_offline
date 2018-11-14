@@ -10,8 +10,7 @@ class StreamTransformers {
   StreamTransformer<ConnectivityResult, ConnectivityResult> debounce(
     Duration debounceDuration,
   ) {
-    return StreamTransformer<ConnectivityResult,
-        ConnectivityResult>.fromHandlers(
+    return StreamTransformer.fromHandlers(
       handleData:
           (ConnectivityResult data, EventSink<ConnectivityResult> sink) {
         if (_seenFirstData) {
